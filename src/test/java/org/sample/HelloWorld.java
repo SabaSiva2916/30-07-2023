@@ -1,7 +1,11 @@
 package org.sample;
 
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
 
 public class HelloWorld {
     public static void main(String[] args) {
@@ -51,6 +55,18 @@ public class HelloWorld {
 	    System.out.println();
 	}
 
-
+        //Declare of Map
+	Map<String, String> map = new LinkedHashMap<String, String>();
+	map.put("J", "Java");
+	map.put("S", "Selenium");
+	map.put("P", "Python");
+	map.put("A", "ApiTesting");
+	
+	//Iteration  of map
+	Set<Entry<String, String>> entrySet = map.entrySet();
+	for (Entry<String, String> entry : entrySet) {
+	    System.out.println(entry.getKey()+"  "+entry.getValue());
+	}
+	
     }
 }
